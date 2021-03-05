@@ -16,20 +16,18 @@ function App(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-      
-        
-        <Typography
-          component="div"
-          style={{ backgroundColor: "#cfe8fc", height: "100vh" }}
-        >
-<Header />
+
+      <Typography
+        component="div"
+        style={{ backgroundColor: "#cfe8fc", height: "100vh" }}
+      >
+        <Header />
         <Carousel />
         <Industry />
         <Products />
         <About />
         <Contact />
-        </Typography>
-       
+      </Typography>
     </React.Fragment>
   );
 }

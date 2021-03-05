@@ -8,20 +8,11 @@ import SearchIcon from "@material-ui/icons/Search";
 import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1, 
-  },
-  
-
   search: {
     position: "relative",
     borderRadius: theme.shape.borderRadius,
-     
-     width: "100%",
-    
-    [theme.breakpoints.up("sm")]: {
-      width: "auto",
-    },
+    float: "right",
+    width: "auto",
   },
   searchIcon: {
     padding: theme.spacing(0, 2),
@@ -43,32 +34,29 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
     transition: theme.transitions.create("width"),
     width: "100%",
-    [theme.breakpoints.up("sm")]: {
-      width: "0ch",
-      "&:focus": {
-        width: "12ch",
-      },
+    width: "0ch",
+    "&:focus": {
+      width: "12ch",
     },
   },
   button: {
-    margin: theme.spacing(1), 
+    margin: theme.spacing(1),
     borderRadius: "5em",
-    borderColor:"white",
-    backgroundColor:"blue",
-    color:"white",
-    
+    borderColor: "white",
+    backgroundColor: "blue",
+    color: "white",
   },
 }));
 
-function Head() {
+function Header() {
   const classes = useStyles();
 
   return (
-    <div  >
-      <AppBar position="static">
+    <div>
+      <AppBar position="static" style={{backgroundColor:"#141414"}}>
         <Toolbar>
           <div style={{ flex: 1 }}></div>
-          <div className={classes.search} >
+          <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
@@ -80,7 +68,6 @@ function Head() {
               }}
               inputProps={{ "aria-label": "search" }}
             />
-            
           </div>
           <Button variant="outlined" className={classes.button}>
             Login
@@ -88,14 +75,6 @@ function Head() {
         </Toolbar>
       </AppBar>
     </div>
-  );
-}
-
-function Header(props) {
-  return (
-     
-      <Head />
-    
   );
 }
 
